@@ -46,7 +46,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
 }
 
 /*прибираємо зі списків крапочки*/
@@ -76,9 +76,9 @@ body {
 
 /*задаємо параметри для контейнера*/
 .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    /* width: 1158px; */
+    /* padding-left: 15px;
+    padding-right: 15px; */
     margin-left: auto;
     margin-right: auto;
 
@@ -90,13 +90,14 @@ body {
 /*роблю оформлення header*/
 .header{
     color: var(--title-text-color);
-    border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
     display: flex;
     align-items: center;
+
+    padding: 24px 16px;
 
 }
 
@@ -106,13 +107,13 @@ body {
 }
 
 .logo {
-    margin-right: 76px;
+    /* margin-right: 76px; */
 
     color: var(--title-text-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
-    line-height: calc(24/18);
+    line-height: calc(24 / 18);
     letter-spacing: 0.03em;
     text-decoration: none;
     text-transform: uppercase;
@@ -123,14 +124,13 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
-    line-height: calc(24/18);
+    line-height: calc(24 / 18);
     letter-spacing: 0.03em;
     text-decoration: none
 }
 
 .header-list {
-    display: flex;
-    gap: 40px;
+    display: none;
 }
 
 .header-link {
@@ -141,7 +141,7 @@ body {
     color: var(--title-text-color);
     font-weight: 500;  
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.02em;
     text-decoration: none;
 
@@ -179,7 +179,7 @@ body {
     color: var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.02em;
     text-decoration: none;
 
@@ -192,15 +192,164 @@ body {
 }
 
 .list-contact {
-    display: flex;
-    margin-left: auto;
-    gap: 40px;
+    display: none;
 }
+
+/*menu*/
+.menu-open-btn {
+    background: transparent;
+    border: transparent;
+    width: 32px;
+    height: 22px;
+    padding: 0;
+    margin-left: auto;
+}
+.menu-open-icon {
+    stroke: var(--title-text-color);
+}
+
+.mob-menu{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    z-index: 999;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    overflow: auto;
+
+    transform: translateX(0);
+    transition: transform var(--transition);
+}
+
+.mob-menu.is-hidden {
+    transform: translateX(100%);
+}
+
+
+.mob-menu > .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.menu-close-btn {
+    /* position: absolute;
+    right: 40px;
+    top: 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.mob-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    margin-bottom: 50px;
+}
+
+.mob-menu-link {
+    color: var(--title-text-color);
+    font-weight: 500;  
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color var(--transition);
+}
+
+.mob-menu-link:hover,
+.mob-menu-link:focus {
+    color: #404BBF;
+}
+
+.mob-menu-contact {
+    margin-bottom: 48px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.mob-menu-contact-tel {
+    margin-bottom: 40px;
+
+    color: #404BBF;
+    font-weight: 500;  
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.mob-menu-contact-mail {
+    color: var(--primary-text-color);
+    font-weight: 500;  
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+
+.ul-icon-mob-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.li-icon-mob-menu {
+    width: 40px;
+    height: 40px;
+}
+
+.link-icon-mob-menu {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-brand-color);
+    
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-mob-menu {
+    fill: var(--light-color);
+}
+
+
+
+
+
+
+
+
+
+
 
 /*оформлення першої секції з заголовками*/
 .title {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/title-bg.jpg);
+    url(../images/mobile-bg.jpg); /*fixed*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -209,22 +358,30 @@ body {
     margin-right: auto;
 
     max-width: 1440px;
-    padding-top: 192px;
-    padding-bottom: 192px;
+    padding-top: 112px; /*fixed*/
+    padding-bottom: 112px; /*fixed*/
     text-align: center;
 }
 
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .title {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile-bg-2x.jpg);
+        }
+    }
+
 
 .main-title {
-    margin-bottom: 48px;
+    margin-bottom: 72px; /*fixed*/
     max-width: 496px;
     margin-left: auto;
     margin-right: auto;
 
     color:#FFFFFF;
-    font-weight: 600;
-    font-size: 56px;
-    line-height: calc(60/56);
+    font-weight: 700; /*fixed*/
+    font-size: 36px; /*fixed*/
+    line-height: calc(40 / 36); /*fixed*/
     letter-spacing: 0.02em;
     text-transform: capitalize;
 }
@@ -240,7 +397,7 @@ body {
     color: #FFFFFF;
     font-family: inherit;
     font-weight: 500; 
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     cursor: pointer;
     padding: 16px, 32px, 16px, 32px;
     border-color: transparent;
@@ -257,30 +414,24 @@ body {
 /*офорлюю частину з текстом*/
 
 .offer {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px; /*fixed*/
+    padding-bottom: 96px; /*fixed*/
 }
 
 .offer-list {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */ /*fixed*/
+    flex-wrap: wrap; /*fixed*/
+    row-gap: 72px;
 }
 
 .icon-box-offer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
-    height: 112px;
-    background: var(--light-color);
-    border-radius: 4px;
-
-    margin-bottom: 8px;
+    display: none; /*fixed*/
     
 }
 
 .icon-offer {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,30 +442,37 @@ body {
     margin-bottom: 8px;
 
     color: var(--title-text-color);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: calc(24/20);
-    letter-spacing: 0.02em;
+    font-weight: 700; /*fixed*/
+    font-size: 36px; /*fixed*/
+    line-height: calc(40 / 36); /*fixed*/
+    letter-spacing: 0.02em; /*fixed*/
+    text-align: center; /*fixed*/
 }
 
 .text-list {
-    width: calc((100% - 72px) / 4);
+    /* width: calc((100% - 72px) / 4); */
+    width: 100%; /*fixed*/
+    
 
     color: var(--primary-text-color);
+    font-weight: 500; /*fixed*/
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.02em;
 }
 
 
 /*частина з картинками*/
 .images {
-    padding-bottom: 120px;
+    display: none;
+    /* padding-bottom: 120px; */
 }
 
-.images-list {
+/* .images-list {
     display: flex;
     gap: 24px;
+
+    width: 100%;
 }
 
 .title-images {
@@ -327,20 +485,22 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
-}
+} */
 
 
 /*частина команди*/
 .team {
     background-color: var(--light-color);
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 128px;
 
 }
 
 .ul-team {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
+    
 }
 
 .team-title {
@@ -349,31 +509,48 @@ body {
     color: var(--title-text-color);
     font-weight: 600;
     font-size: 36px;
-    line-height: calc(40/36);
+    line-height: calc(40 / 36);
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
 }
 
+
+
 .list-team {
+    width: 100%;
+    margin-bottom: 8px;
+
     background-color: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 
     color: var(--primary-text-color);
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.02em;
     text-align: center;
 }
 
 .imges-team {
-    margin-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    
+    /* margin-right: 0; */
+}
+
+.h3-title-team {
+    margin-bottom: 8px;
+
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    letter-spacing: 0.02em;
 }
 
 .team-text {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 32px 16px;
 }
 
 .ul-icon-team {
@@ -416,8 +593,8 @@ body {
 
 /*customers*/
 .customers {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px; /*изменила*/
+    padding-bottom: 96px; /*изменила*/
 }
 
 .customers-title {
@@ -425,7 +602,7 @@ body {
 
     font-weight: 700;
     font-size: 36px;
-    line-height: calc(40/36);
+    line-height: calc(40 / 36);
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
@@ -433,11 +610,14 @@ body {
 
 .ul-customers{
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 72px; /*изменила*/
+    column-gap: 16px; /*добавила*/
+
 }
 
 .li-customers {
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - 16px) / 2); /*изменила*/
 
     list-style-type: none;
 
@@ -482,17 +662,23 @@ body {
 /*футер*/
 .footer {
     background-color: var(--title-text-color);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px; /*fixed*/
+    padding-bottom: 96px; /*fixed*/
 
 }
 
 .footer-flex {
     display: flex;
+    flex-wrap: wrap; /*fixed*/
+    justify-content: center; 
+    text-align: center; /*fixed*/
+    row-gap: 72px; /*fixed*/
 }
 
 .footet-margin {
-    margin-right: 120px;
+    /* margin-right: 120px;  */ /*fixed*/
+    text-align: center; /*fixed*/
+    
 }
 
 .logo-footer {
@@ -500,10 +686,11 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
-    line-height: calc(21/18);
+    line-height: calc(21 / 18);
     letter-spacing: 0.03em;
     text-decoration: none;
     text-transform: uppercase;
+    
 }
 
 .footer-text {
@@ -513,8 +700,10 @@ body {
     
     color: var(--accent-color);
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.02em;
+
+    text-align: left; /*fixed*/
     
 }
 
@@ -524,7 +713,7 @@ body {
 
     font-weight: 500;
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.02em;
 
     text-transform: capitalize;
@@ -568,17 +757,28 @@ body {
 }
 
 .subscribe {
-    margin-left: auto;
+    /* margin-left: auto; fixed */
 }
 
 .footer-form {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 24px; /*fixed*/
+    flex-wrap: wrap; /*fixed*/
+    row-gap: 16px; /*fixed*/
+
+    width: 100%; /*fixed*/
+    
 }
 
+.footer-label {
+    width: 100%; /*fixed*/
+}
+
+
 .footer-input {
-    width: 264px;
+    /* width: 264px; */ /*fixed*/
+    width: 100%; /*fixed*/
     height: 40px;
 
     padding: 8px 16px;
@@ -589,7 +789,7 @@ body {
 
     color: var(--light-color);
     font-size: 14px;
-    line-height: calc(20/14);
+    line-height: calc(20 / 14);
     letter-spacing: 0.02em;
 
     background-color: transparent;
@@ -604,15 +804,13 @@ body {
     border-color: var(--primary-brand-color);
 }
 
-
-
 .footer-input::placeholder {
     font-size: 12px;
-    line-height: calc(24/12);
+    line-height: calc(24 / 12);
 }
 
 .footer-button {
-    min-width: 165px;
+    /* min-width: 165px; */
     height: 40px;
     padding: 8px 24px;
 
@@ -626,7 +824,7 @@ body {
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.04em;
     text-transform: capitalize;
 
@@ -650,28 +848,33 @@ body {
 /*сторінка портфоліо*/
 /*секція з кнопками*/
 .prt-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 48px; /*fixed*/
+    padding-bottom: 48px; /*fixed*/
 }
 
 .btn-section {
     display: flex;
-    justify-content: center;
+    justify-content: left; /*fixed*/
+    
     gap: 24px;
+    flex-wrap: wrap;/*fixed*/
+
 }
 
+
 .portfolio-btn {
-    padding: 12px 24px;
+    padding: 8px 16px; /*fixed*/
     border-radius: 4px;
     border: 1px solid #E7E9FC;
+    
 
     background-color: var(--accent-color);
     font-family: inherit;
     color: var(--primary-brand-color);
     border: none;
-    font-weight: 600;
+    font-weight: 500; /*fixed*/
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.04em;
     cursor: pointer;
 
@@ -689,15 +892,18 @@ body {
 /*секція з картинками*/
 
 .portfolio-li {
-    margin-top: 72px;
+    margin-top: 48px; /*fixed*/
 
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: center; fixed */
     column-gap: 24px; 
     row-gap: 48px;
 }
 
 .list-portfolio{
+    width: 100%; /*fixed*/
+    
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     background-color: #FFFFFF;
 }
@@ -717,6 +923,12 @@ body {
 
 .link-portfolio:hover .images-text {
     transform: translateY(0);
+}
+
+.portfolio-images {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .images-text-wrap {
@@ -751,7 +963,7 @@ body {
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 20px;
-    line-height: calc(24/20);
+    line-height: calc(24 / 20);
     letter-spacing: 0.02em;
     text-decoration: none;
 }
@@ -759,7 +971,7 @@ body {
 .text-portfolio {
     color: var(--primary-text-color);
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.02em;
     text-decoration: none;
 }
@@ -789,7 +1001,7 @@ body {
 
 .modal {
     position: absolute;
-    width: 408px;
+    width: 392px; /*fixed*/
     top:50%;
     left: 50%;
     background: #FCFCFC;
@@ -851,7 +1063,7 @@ body {
 
     font-weight: 500;
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     text-align: center;
     letter-spacing: 0.02em;
 }
@@ -873,7 +1085,7 @@ body {
     color: var(--subtle-text-color);
 
     font-size: 12px;
-    line-height: calc(16/12);
+    line-height: calc(16 / 12);
     letter-spacing: 0.04em;
     text-transform: capitalize;
 }
@@ -946,7 +1158,7 @@ body {
 
     font-family: 'Roboto';
     font-size: 12px;
-    line-height: calc(16/12);
+    line-height: calc(16 / 12);
     letter-spacing: 0.04em;
 }
 
@@ -962,7 +1174,7 @@ body {
 
     font-weight: 400;
     font-size: 12px;
-    line-height: calc(16/12);
+    line-height: calc(16 / 12);
     letter-spacing: 0.04em;
 }
 
@@ -1015,7 +1227,7 @@ body {
     font-weight: 500;
     font-family: inherit;
     font-size: 16px;
-    line-height: calc(24/16);
+    line-height: calc(24 / 16);
     letter-spacing: 0.04em;
     text-transform: capitalize;
 

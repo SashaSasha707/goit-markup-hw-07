@@ -1,0 +1,201 @@
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1128px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    /*header*/
+
+    .header-container {
+        padding: 0 16px;
+    }
+
+    .logo {
+        margin-right: 76px;
+    }
+
+
+    .list-contact {
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        margin-left: auto;
+    }
+
+     /*title*/
+    .title {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title-bg.jpg);
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .title {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title-bg-2x.jpg);
+        }
+    }
+
+     .main-title {
+        margin-bottom: 48px; /*fixed*/
+     }
+
+    /*offer*/
+     .offer > .container {
+        width:1128px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .offer {
+        padding-top: 120px; 
+        padding-bottom: 120px; 
+    }
+
+    .offer-list {
+        display: flex;
+        gap: 24px; /*fixed*/
+    }
+
+    .icon-box-offer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        height: 112px;
+        background: var(--light-color);
+        border-radius: 4px;
+
+        margin-bottom: 8px;
+    }
+
+    .h3-title {
+        text-align: left;
+         font-weight: 700; /*fixed*/
+        font-size: 20px; /*fixed*/
+        line-height: calc(24 / 20); /*fixed*/
+        }
+
+    .text-list {
+        width: calc((100% - 72px) / 4); 
+    }
+
+    /*imaged*/
+    .images {
+        display: block;
+        padding-bottom: 120px;
+    }
+        
+    .images-list {
+        display: flex;
+        gap: 24px;
+        
+        width: 100%;
+    }
+        
+        .title-images {
+        margin-bottom: 72px;
+            
+        color: var(--title-text-color);
+        font-weight: 600;
+        font-size: 36px;
+        line-height: calc(40 / 36);
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        text-align: center;
+    } 
+
+
+    /*частина команди*/
+
+    .team  >.container {
+        width: 1128px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+
+    .team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    
+    .list-team {
+        width: calc((100% - 72px) / 4);
+    }
+
+     /*customers*/
+
+    .customers {
+        padding-top: 120px; /*изменила*/
+        padding-bottom: 120px; /*изменила*/
+    }
+
+    .ul-customers{
+        gap: 24px;
+    }
+
+    .li-customers {
+        width: calc((100% - 120px) / 6); /*изменила*/
+    }   
+
+    /*footer*/
+
+    .footer > .container {
+        width: 1128px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .footer {
+        padding-top: 100px; /*fixed*/
+        padding-bottom: 100px; /*fixed*/
+
+    }
+
+    .footer-flex {
+        gap: 0;
+    }
+
+    .footet-margin {
+        margin-right: 120px;; /*fixed*/
+    }
+
+    .subscribe {
+        margin-left: auto; /*fixed*/
+    }
+
+    /*portfolio*/
+    .prt-section {
+        padding-top: 108px; /*fixed*/
+        padding-bottom: 108px; /*fixed*/
+    }
+
+    .prt-section > .container {
+        width: 1128px;
+        
+    }
+    .prt-section {
+        padding-top: 96px; /*fixed*/
+        padding-bottom: 120px; /*fixed*/
+    }
+
+    .prt-section > .container {
+        width: 1128px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .portfolio-li {
+        margin-top: 72px; /*fixed*/
+    }
+
+    .list-portfolio {
+        width: calc((100% - 48px) / 3);
+    }
+
+
+}
