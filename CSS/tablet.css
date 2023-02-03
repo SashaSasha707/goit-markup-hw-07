@@ -18,6 +18,13 @@
         margin-right: 123px;
     }
 
+    .contacts {
+        font-size: 12px;
+        line-height: calc(16 / 12);
+        letter-spacing: 0.04em;
+    }
+
+
 
     .list-contact {
         display: flex;
@@ -34,6 +41,7 @@
     .title {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-bg.jpg);
         padding-bottom: 108px;
+        max-width: 768px;
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -93,11 +101,12 @@
     .ul-customers{
         row-gap: 72px; /*изменила*/
         column-gap: 24px; /*добавила*/
+        justify-content: center;
 
     }
 
     .li-customers {
-        width: calc((100% - 48px) / 3); /*изменила*/
+        width: 168px; /*изменила*/
     }
 
     /*footer*/
@@ -136,6 +145,7 @@
 
     .btn-section{
         justify-content: center;
+        gap: 24px;
     }
 
     .portfolio-btn {

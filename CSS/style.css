@@ -76,9 +76,9 @@ body {
 
 /*задаємо параметри для контейнера*/
 .container {
-    /* width: 1158px; */
-    /* padding-left: 15px;
-    padding-right: 15px; */
+    /* width: 320px; */
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
 
@@ -275,8 +275,12 @@ body {
     transition: color var(--transition);
 }
 
-.mob-menu-link:hover,
+/* .mob-menu-link:hover,
 .mob-menu-link:focus {
+    color: #404BBF;
+} */
+
+.current-mob {
     color: #404BBF;
 }
 
@@ -336,16 +340,6 @@ body {
     fill: var(--light-color);
 }
 
-
-
-
-
-
-
-
-
-
-
 /*оформлення першої секції з заголовками*/
 .title {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -357,7 +351,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-    max-width: 1440px;
+    max-width: 428px;
     padding-top: 112px; /*fixed*/
     padding-bottom: 112px; /*fixed*/
     text-align: center;
@@ -500,6 +494,7 @@ body {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
+    justify-content: center;
     
 }
 
@@ -518,7 +513,7 @@ body {
 
 
 .list-team {
-    width: 100%;
+    width: 264px;
     margin-bottom: 8px;
 
     background-color: #FFFFFF;
@@ -856,7 +851,7 @@ body {
     display: flex;
     justify-content: left; /*fixed*/
     
-    gap: 24px;
+    gap: 16px 24px;
     flex-wrap: wrap;/*fixed*/
 
 }
